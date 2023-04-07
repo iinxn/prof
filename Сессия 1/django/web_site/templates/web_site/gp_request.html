@@ -1,0 +1,10 @@
+{% extends 'web_site.html' %}{% block content %}
+
+<body>
+  <form method="post" class="form__main" enctype="multipart/form-data">
+    {% csrf_token %} {{form}}
+    <button type="submit" class="form__button__send">Оформить заявку</button>
+  </form>
+</body>
+
+{% endblock content %}

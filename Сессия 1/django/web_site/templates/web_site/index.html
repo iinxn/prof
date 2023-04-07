@@ -1,0 +1,9 @@
+{% extends 'web_site.html' %} {% block content %}
+<body>
+  <form method="post" class="form__main">
+    {% csrf_token %} {{form}}
+    <button type="submit" class="form__button">Войти</button>
+    <a href="{% url 'register_page' %}" class="form__link">Регистрация</a>
+  </form>
+</body>
+{% endblock content %}

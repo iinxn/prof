@@ -1,0 +1,45 @@
+#:kivy 2.0.0
+<Container>:
+    BoxLayout:
+        orientation: "vertical"
+        TextInput:
+            id: login
+            multiline: False
+            hint_text: "Введите код пользователя"
+        Button:
+            text: "Войти"
+            on_press:
+                root.login()
+<Screen2>:
+    id: "screen"
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            size_hint_y: 0.1
+            padding: 10
+            TextInput:
+                id: search
+                hint_text: "Введите ID"
+                multiline: False
+            Button:
+                text: "Поиск"
+                on_press:
+                    root.search()
+            Button:
+                text: "Доступ"
+                on_press:
+                    root.access()
+        BoxLayout:
+            id: layout
+            orientation: "vertical"
+<Screen3>:
+    GridLayout:
+        cols: 2
+        Button:
+            text: "Разрешить доступ"
+            on_press:
+                root.back()
+        Button:
+            text: "Запретить"
+            on_press:
+                root.back()

@@ -1,0 +1,8 @@
+{% extends 'web_site.html' %}{% block content %}
+<div>
+  <a href="{% url 'request_page' %}" class="form__button__home">Личное посещение</a>
+</div>
+<div>
+  <a href="{% url 'g_request_page' %}" class="form__button__home">Групповое посещение</a>
+</div>
+{% endblock content %}
